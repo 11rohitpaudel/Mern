@@ -1,0 +1,29 @@
+label{
+    display: block;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+input{
+    padding: 20px 40px;
+    margin-top: 10px;
+    border-color: blue;
+
+}
+form{
+    background-color: bisque;
+
+}
+text area{
+    margin-left: 20px;
+    margin right: 10px;
+
+}
+button{
+    padding: 10px 60px;
+    display: block;
+}
+ select option {
+    background-color: blue;
+    position: fixed;
+ }
+
