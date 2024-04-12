@@ -58,7 +58,7 @@
         display: flex;
         flex-direction: column;
         align-items: end;
-        
+
         /* justify-content: center;
     align-items: center; */
     }
@@ -78,9 +78,9 @@
         height: 100px;
         display: flex;
         width: 50px;
-        
+
     }
-    
+
 
     .info {
         background-color: darkorange;
@@ -93,28 +93,81 @@
 
     header {
         display: flex;
-        justify-contnt: space-between;
-        background-color: black;
-        height: 20px;
+        justify-content: space-between;
+        background-color: aqua;
+        padding: 20px;
+        gap: 20px;
+        position: sticky;
+        top: 0;
     }
 
 
-    .menu-items {
+    .menu-items ul {
         display: flex;
         background-color: aqua;
-        width: 90%;
+        width: 80%;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
+        gap: 20px;
+        list-style: none;
     }
 
+    .menu-items li:hover {
+        cursor: pointer;
+        color: purple;
+    }
+
+    .header-item {
+        position: relative;
+    }
+
+    .header-item .sub-items {
+        display: flex;
+        flex-direction: column;
+    } 
+
+    .header-item:hover .sub-items{
+        display: flex !important;
+    }
+    .header-item .sub-items{
+        display: none!important;
+        flex-direction: column !important;
+        background-color: bisque;
+        position: absolute;
+        width: 200px;
+        left: -100px;
+        color: black;
+        gap:40px !important;
+        padding: 0px;
+        border-radius: 15px;
+        border: 5px solid red;
+        font-weight: 800;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 10px;
+
+ 
+    }
+    .sub-items li:hover{
+        background-color: rgb(224, 177, 177);
+    }
+    .sub-items li{
+        width: 100%;
+        padding: 5px;
+    }
+
+
     .header-button {
-        display: block;
+        display: flex;
         background-color: aqua;
+        width: 10%;
+        justify-content: space-between;
+
 
     }
 
     .logo {
-        background-color:aqua;
+        background-color: aqua;
         justify-content: center;
         align-items: center;
         background-color: white;
@@ -144,13 +197,13 @@
         background-color: red;
         width: 50%;
         display: flex;
-        gap:20px;
+        gap: 20px;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
     }
 
-    .left-right-item{
+    .left-right-item {
         height: 150px;
         width: 150px;
         background-color: aliceblue;
@@ -205,10 +258,21 @@
 <body>
     <header>
         <div class="logo">logo</div>
-        <div class="menu-items" <ul>
-            <li>Home</li>
-            <li>category</li>
-            <li>Address</li>
+        <div class="menu-items">
+
+            <ul>
+                <li>Home
+                </li>
+                <li class="header-item">
+                    category
+                    <ul class="sub-items">
+                        <li>html</li>
+                        <li>css</li>
+                        <li>react</li>
+                        <li>java</li>
+                    </ul>
+                </li>
+                <li>Address</li>
             </ul>
         </div>
         <div class="header-button">
@@ -246,7 +310,21 @@
         </div>
         <div class="content-right">
             <div class="middle-right">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem tempora repellat magnam doloremque a nesciunt sunt suscipit dolore ea perspiciatis reprehenderit officia, rerum exercitationem debitis et aperiam maxime velit maiores dolorum eligendi quasi excepturi accusantium! Debitis sint quos labore rerum perferendis officia saepe quasi, tempora voluptatem facilis eligendi nemo quibusdam libero id autem adipisci sunt odit mollitia aperiam, nostrum consequatur? Quaerat qui repellat similique magni nihil voluptates, delectus sequi modi itaque nobis minima expedita, optio, quae placeat laboriosam commodi! Mollitia eveniet quasi repellat numquam similique, nisi veniam magnam enim laudantium non. Illo rerum voluptates aliquam eligendi veritatis quas totam facilis quod delectus temporibus. Totam ea obcaecati quisquam officiis, aut ut, error illo, sed laboriosam nesciunt esse. Odio corporis reiciendis sint animi cum, nobis officia, earum excepturi nostrum iusto aliquid possimus consectetur aliquam aspernatur omnis et quod eos in facilis itaque! Quas, blanditiis sint. Sequi iste facilis repellendus consequuntur culpa a voluptates modi, in magni quis et ea dicta blanditiis ullam dolores expedita officiis repellat eius cupiditate commodi, rem nobis atque? Velit quos impedit consequuntur quibusdam voluptatem quisquam repellendus mollitia laudantium ipsa maiores iusto nesciunt amet molestias iste, debitis optio fugit facere dolor dolorum eligendi cum odio quaerat expedita nulla. Nam.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem tempora repellat magnam doloremque a
+                nesciunt sunt suscipit dolore ea perspiciatis reprehenderit officia, rerum exercitationem debitis et
+                aperiam maxime velit maiores dolorum eligendi quasi excepturi accusantium! Debitis sint quos labore
+                rerum perferendis officia saepe quasi, tempora voluptatem facilis eligendi nemo quibusdam libero id
+                autem adipisci sunt odit mollitia aperiam, nostrum consequatur? Quaerat qui repellat similique magni
+                nihil voluptates, delectus sequi modi itaque nobis minima expedita, optio, quae placeat laboriosam
+                commodi! Mollitia eveniet quasi repellat numquam similique, nisi veniam magnam enim laudantium non. Illo
+                rerum voluptates aliquam eligendi veritatis quas totam facilis quod delectus temporibus. Totam ea
+                obcaecati quisquam officiis, aut ut, error illo, sed laboriosam nesciunt esse. Odio corporis reiciendis
+                sint animi cum, nobis officia, earum excepturi nostrum iusto aliquid possimus consectetur aliquam
+                aspernatur omnis et quod eos in facilis itaque! Quas, blanditiis sint. Sequi iste facilis repellendus
+                consequuntur culpa a voluptates modi, in magni quis et ea dicta blanditiis ullam dolores expedita
+                officiis repellat eius cupiditate commodi, rem nobis atque? Velit quos impedit consequuntur quibusdam
+                voluptatem quisquam repellendus mollitia laudantium ipsa maiores iusto nesciunt amet molestias iste,
+                debitis optio fugit facere dolor dolorum eligendi cum odio quaerat expedita nulla. Nam.
             </div>
             <div class="last-right">
                 <div class="top-right">
@@ -254,7 +332,13 @@
                     <div class="image">image
                         <img src="./oj.webp" alt="">
                     </div>
-                    <div class="info">info</div>
+                    <div class="info">
+                        <div class="name">Name</div>
+                        <div class="name">Adress</div>
+                        <div class="name">Adress</div>
+                        <div class="name">Adress</div>
+
+                    </div>
                 </div>
                 <div class="bottom-right">Bottom right</div>
             </div>
