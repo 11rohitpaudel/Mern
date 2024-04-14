@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid layout</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        box-sizing: border-box;
+    }
+.left{
+        background-color: blue;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+        gap: 20px;
+    }
+    .left-child{
+        background-color: white;
+    }
+
+.right{
+    background-color: blueviolet;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.main-content{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 40% auto;
+}
+.left-right{
+    background-color: brown;
+    display: grid;
+    padding: 15px;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
+    gap: 20px;
+}
+
+.right-right{
+    background-color: burlywood;
+    display: grid;
+    grid-template-rows: 60% auto;
+    padding: 10px;
+    gap:10px;
+
+}
+.top{
+    background-color: cadetblue;
+}
+.bottom{
+    background-color: aqua;
+}
+
+.chiildrens{
+    background-color: whitesmoke;
+}
+.chiildrens7{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.chiildrens10{
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+.chiildrens11 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+.chiildrens1{
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.chiildrens3{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+    
+
+
+</style>
+
+<body>
+    <div class="main-content">
+        <div class="left">
+            <div class="left-child"></div>
+            <div class="left-child"></div>
+            <div class="left-child"></div>
+            <div class="left-child"></div>
+            <div class="left-child"></div>
+            <div class="left-child"></div>
+           
+        </div>
+        <div class="right">
+            <div class="left-right">
+                <div class="chiildrens chiildrens1"></div>
+                <div class="chiildrens "></div>
+                <div class="chiildrens chiildrens3"></div>
+                
+                <div class="chiildrens"></div>
+                <div class="chiildrens chiildrens7"></div>
+                <div class="chiildrens chiildrens8"></div>
+                <div class="chiildrens chiildrens9"></div>
+                <div class="chiildrens chiildrens10"></div>
+                <div class="chiildrens chiildrens11"></div>
+            </div>
+            <div class="right-right">
+                <div class="top">
+            
+                </div>
+                <div class="bottom"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
